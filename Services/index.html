@@ -122,7 +122,7 @@
          
 <ul class="menu uppercase">
   <li class="dropdown" onclick="this.classList.toggle('open')">
-    <a href="javascript:void(0)">Services</a>
+    <a href="javascript:void(0)" style="color: white; position: relative; z-index: 1000;">Services</a>
     <div class="dropdown-content">
       <a href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
       <a href="/CBPM-Services.html">CBPM Services</a>
@@ -557,12 +557,13 @@
   }
 
   .menu a {
-    text-decoration: none;
-    padding: 10px 15px;
-    color: #fff;
-    display: inline-block;
-    font-weight: bold;
-  }
+  color: white !important;
+  z-index: 999;
+  position: relative;
+  background-color: red;
+}
+
+  
 
   .dropdown-content {
     display: none;
