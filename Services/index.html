@@ -120,18 +120,19 @@
     </div>
         <div class="center">
          
-<ul class="menu uppercase">
-  <li class="dropdown" onclick="this.classList.toggle('open')">
-    <a href="javascript:void(0)" style="color: white; position: relative; z-index: 1000;">Services</a>
-    <div class="dropdown-content">
-      <a href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
-      <a href="/CBPM-Services.html">CBPM Services</a>
-      <a href="/Pharmacy-Setup-Compliance.html">Pharmacy Setup & Compliance</a>
-      <a href="/Remediation-Assistance.html">Remediation Assistance</a>
-      <a href="/Regulatory-Licence-Application.html">Regulatory Licensing</a>
-      <a href="/GMDP-Consultancy.html">GMDP Consultancy</a>
-    </div>
-  </li>
+<ul class="menu ">
+<li class="dropdown">
+  <a class="services-button" href="javascript:void(0)">Services</a>
+  <div class="dropdown-content">
+    <a href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
+    <a href="/CBPM-Services.html">CBPM Services</a>
+    <a href="/Pharmacy-Setup-Compliance.html">Pharmacy Setup & Compliance</a>
+    <a href="/Remediation-Assistance.html">Remediation Assistance</a>
+    <a href="/Regulatory-Licence-Application.html">Regulatory Licensing</a>
+    <a href="/GMDP-Consultancy.html">GMDP Consultancy</a>
+  </div>
+</li>
+
   <li><a href="/about/">About</a></li>
   <li><a href="/contact/">Contact</a></li>
 </ul>
@@ -147,7 +148,7 @@
   </div>
   <div class="sections compact hidden">
     <div class="left"><a href="/" title="Your Company">
-      <img src="assets\logo.png" alt="Your Logo" style="width:182px; height:40px;"></use></svg></a></div>
+      <img src="assets\logo.png" alt="Your Logo" style="width: 150px; height:40px;"></use></svg></a></div>
     <div class="right"><div id="menu-icon">&#9776;</div></div>
   </div>
 </nav>
@@ -545,60 +546,55 @@
 <div class="progress-bar blue"></div>
 
 <style>
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    font-family: sans-serif;
-  }
-
-  .menu > li {
-    position: relative;
-  }
-
-  .menu a {
-  color: white !important;
-  z-index: 999;
+/* Reset any inherited styles */
+ul.menu li.dropdown {
   position: relative;
-  background-color: red;
 }
 
-  
+/* Services button style */
+.services-button {
+  color: white !important;
+  background-color: #ff0000;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  z-index: 9999;
+  position: relative;
+}
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 100%;
-    background-color: rgba(255, 255, 255, 0.92); /* Transparent with slight opacity */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-  }
+/* Dropdown box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
 
-  .dropdown-content a {
-    display: block;
-    padding: 10px 15px;
-    color: #000;
-    font-weight: normal;
-  }
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  .dropdown:hover .dropdown-content,
-  .dropdown.open .dropdown-content {
-    display: block;
-  }
+/* Links inside dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
-  .dropdown-content a:hover {
-    background-color: #f0f0f0;
-  }
-
-  /* OPTIONAL: Hide mobile menu on desktop if not already done */
-  @media screen and (min-width: 768px) {
-    .mobile-menu {
-      display: none !important;
-    }
-  }
+/* Hover state */
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
 </style>
+
 
 
 <!-- custom slider -->
