@@ -120,54 +120,6 @@
     </div>
         <div class="center">
          
- <style>
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    font-family: sans-serif;
-  }
-
-  .menu > li {
-    position: relative;
-  }
-
-  .menu a {
-    text-decoration: none;
-    padding: 10px 15px;
-    color: #fff;
-    display: inline-block;
-    font-weight: bold;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.92); /* Transparent with slight opacity */
-    min-width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 99;
-  }
-
-  .dropdown-content a {
-    display: block;
-    padding: 10px 15px;
-    color: #000;
-    font-weight: normal;
-  }
-
-  .dropdown:hover .dropdown-content,
-  .dropdown.open .dropdown-content {
-    display: block;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f0f0f0;
-  }
-</style>
-
 <ul class="menu uppercase">
   <li class="dropdown" onclick="this.classList.toggle('open')">
     <a href="javascript:void(0)">Services</a>
@@ -591,6 +543,61 @@
 
 <!-- Loading Progress Bar -->
 <div class="progress-bar blue"></div>
+
+<style>
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-family: sans-serif;
+  }
+
+  .menu > li {
+    position: relative;
+  }
+
+  .menu a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 100%;
+    background-color: rgba(255, 255, 255, 0.92); /* Transparent with slight opacity */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: normal;
+  }
+
+  .dropdown:hover .dropdown-content,
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* OPTIONAL: Hide mobile menu on desktop if not already done */
+  @media screen and (min-width: 768px) {
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+</style>
 
 
 <!-- custom slider -->
