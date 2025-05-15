@@ -124,14 +124,15 @@
 <li class="dropdown22" id="servicesDropdown">
   <a class="services-button22" href="javascript:void(0)">Services</a>
   <div class="dropdown-content22">
-    <a href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
-    <a href="/CBPM-Services.html">CBPM Services</a>
-    <a href="/Pharmacy-Setup-Compliance.html">Pharmacy Setup & Compliance</a>
-    <a href="/Remediation-Assistance.html">Remediation Assistance</a>
-    <a href="/Regulatory-Licence-Application.html">Regulatory Licensing</a>
-    <a href="/GMDP-Consultancy.html">GMDP Consultancy</a>
+    <a class="dropdown-link-btn" href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
+    <a class="dropdown-link-btn" href="/CBPM-Services.html">CBPM Services</a>
+    <a class="dropdown-link-btn" href="/Pharmacy-Setup-Compliance.html">Pharmacy Setup & Compliance</a>
+    <a class="dropdown-link-btn" href="/Remediation-Assistance.html">Remediation Assistance</a>
+    <a class="dropdown-link-btn" href="/Regulatory-Licence-Application.html">Regulatory Licensing</a>
+    <a class="dropdown-link-btn" href="/GMDP-Consultancy.html">GMDP Consultancy</a>
   </div>
 </li>
+
 
   <li><a href="/About/">About</a></li>
   <li><a href="/Contact/">Contact</a></li>
@@ -550,48 +551,72 @@
 
 
 
-/* Services button style */
-.services-button22 {
-  color: #fff !important;
-  padding: 10px 20px;
+/* Fix overall positioning */
+.dropdown22 {
+  position: relative;
   display: inline-block;
-  font-weight: bold;
+  margin-right: 20px; /* spacing between Services and About/Contact */
+}
+
+.menu.uppercase > li > a {
   text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Align Services Button */
+.services-button22 {
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: bold;
   background: transparent;
   border: none;
   cursor: pointer;
-  position: relative;
   z-index: 1000;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Dropdown box */
 .dropdown-content22 {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 120%; /* LOWER the dropdown to avoid overlapping */
   left: 0;
-  background-color: #000; /* black background */
-  border-radius: 0 0 4px 4px;
-  min-width: 180px;
-  overflow: hidden;
+  width: 220px;
+  background-color: #000;
+  border-radius: 6px;
+  padding: 8px 0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   z-index: 9999;
 }
 
-/* Links inside dropdown */
-.dropdown-content22 a {
-  display: block;
-  padding: 12px 20px;
-  text-align: center;
-  color: white;
+
+
+/* Prevent inheritance from .menu and .uppercase affecting dropdown items */
+.dropdown-content22 .dropdown-link-btn {
+  text-transform: none !important; /* prevent uppercase */
+  font-size: 14px;
   font-weight: 600;
+  color: #fff;
+  background: transparent;
+  padding: 12px 18px;
+  display: block;
+  text-align: center;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  letter-spacing: normal;
+  
 }
 
-/* Hover effect (like screenshot) */
-.dropdown-content22 a:hover {
-  background-color: #1a1a1a; /* Slightly lighter black */
+
+/* Hover effect for buttons */
+.dropdown-link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0;
 }
 
 /* Show dropdown when hovered or clicked */
@@ -600,33 +625,12 @@
   display: block;
 }
 
-/* Set dropdown container to relative so its children align correctly */
-.dropdown22 {
-  position: relative;
-  display: inline-block;
+.dropdown-content22 .dropdown-link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0;
 }
 
-/* Dropdown box */
-.dropdown-content22 {
-  display: none;
-  position: absolute;
-  top: 100%; /* directly below the button */
-  left: 0;
-  width: 100%; /* match button width */
-  background-color: #000; /* black background */
-  border-radius: 0 0 4px 4px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  z-index: 9999;
-}
-.services-button22 {
-  width: 180px; /* set fixed width */
-  text-align: center;
-}
 
-.dropdown-content22 {
-  width: 180px; /* match width exactly */
-}
 
 
 </style>
