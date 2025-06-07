@@ -120,23 +120,22 @@
     </div>
         <div class="center">
          
-<ul class="menu uppercase">
-<li class="dropdown22" id="servicesDropdown">
-  <a class="services-button22" href="javascript:void(0)">Services</a>
-  <div class="dropdown-content22">
-    <a class="dropdown-link-btn" href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
-    <a class="dropdown-link-btn" href="/CBPM-Services.html">CBPM Services</a>
-    <a class="dropdown-link-btn" href="/Pharmacy-Setup-Compliance.html">Pharmacy Setup & Compliance</a>
-    <a class="dropdown-link-btn" href="/Remediation-Assistance.html">Remediation Assistance</a>
-    <a class="dropdown-link-btn" href="/Regulatory-Licence-Application.html">Regulatory Licensing</a>
-    <a class="dropdown-link-btn" href="/GMDP-Consultancy.html">GMDP Consultancy</a>
-  </div>
-</li>
-
-
-  <li><a href="/About/">About</a></li>
-  <li><a href="/Contact/">Contact</a></li>
+<ul class="uppercase" style="display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; justify-content: center; align-items: center; font-size: 14px; font-weight: 600;">
+  <li class="dropdown22" id="servicesDropdown" style="position: relative;">
+    <a class="services-button22" href="javascript:void(0)" style="text-decoration: none; color: white;">Services</a>
+    <div class="dropdown-content22">
+      <a class="dropdown-link-btn" href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
+      <a class="dropdown-link-btn" href="/CBPM-Services.html">CBPM Services</a>
+      <a class="dropdown-link-btn" href="/Pharmacy-Setup-Compliance.html">Pharmacy Setup & Compliance</a>
+      <a class="dropdown-link-btn" href="/Remediation-Assistance.html">Remediation Assistance</a>
+      <a class="dropdown-link-btn" href="/Regulatory-Licence-Application.html">Regulatory Licensing</a>
+      <a class="dropdown-link-btn" href="/GMDP-Consultancy.html">GMDP Consultancy</a>
+    </div>
+  </li>
+  <li><a href="/About/" style="text-decoration: none; color: white;">About</a></li>
+  <li><a href="/Contact/" style="text-decoration: none; color: white;">Contact</a></li>
 </ul>
+
 
     </div>
     <div class="right">
@@ -555,7 +554,7 @@
 .dropdown22 {
   position: relative;
   display: inline-block;
-  margin-right: 20px; /* spacing between Services and About/Contact */
+  margin-right: 0px; /* spacing between Services and About/Contact */
 }
 
 .menu.uppercase > li > a {
@@ -568,18 +567,7 @@
 
 
 /* Align Services Button */
-.services-button22 {
-  color: #fff;
-  padding: 12px 20px;
-  font-weight: bold;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 1000;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
+
 
 /* Dropdown box */
 .dropdown-content22 {

@@ -127,23 +127,37 @@
       </a>
     </div>
         <div class="center">
-      <ul class="menu uppercase">
-  <li><a href="/Services/">Services</a></li>
-  <li><a href="/About/">About</a></li>
-  <li><a href="/Contact/">Contact</a></li>
+         
+<ul class="uppercase" style="display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; justify-content: center; align-items: center; font-size: 14px; font-weight: 600;">
+  <li class="dropdown22" id="servicesDropdown" style="position: relative;">
+    <a class="services-button22" href="javascript:void(0)" style="text-decoration: none; color: white;">Services</a>
+    <div class="dropdown-content22">
+      <a class="dropdown-link-btn" href="/Site-setup-Licensing.html">Site Setup & Licensing</a>
+      <a class="dropdown-link-btn" href="/CBPM-Services.html">CBPM Services</a>
+      <a class="dropdown-link-btn" href="/Pharmacy-Setup-Compliance.html">Pharmacy Setup & Compliance</a>
+      <a class="dropdown-link-btn" href="/Remediation-Assistance.html">Remediation Assistance</a>
+      <a class="dropdown-link-btn" href="/Regulatory-Licence-Application.html">Regulatory Licensing</a>
+      <a class="dropdown-link-btn" href="/GMDP-Consultancy.html">GMDP Consultancy</a>
+    </div>
+  </li>
+  <li><a href="/About/" style="text-decoration: none; color: white;">About</a></li>
+  <li><a href="/Contact/" style="text-decoration: none; color: white;">Contact</a></li>
 </ul>
+
+
     </div>
     <div class="right">
       <ul class="menu trim">
         <li><a href="https://www.linkedin.com/company/rhazers-pharma" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#linkedin"></use></svg></a></li>
-        
+        <li><a href="http://twitter.com/designmodo" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+        <li class="cropRight"><a href="http://instagram.com/designmodo" class="trimRight" target="_blank"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#instagram"></use></svg></a></li>
       </ul>
     </div>
   </div>
   <div class="sections compact hidden">
     <div class="left"><a href="/" title="Your Company">
-      <img src="assets\logo.png" alt="Your Logo" style="width:150px; height:40px;"></use></svg></a></div>
-      <div class="right"><div id="menu-icon">&#9776;</div></div>
+      <img src="assets\logo.png" alt="Your Logo" style="width: 150px; height:40px;"></use></svg></a></div>
+    <div class="right"><div id="menu-icon">&#9776;</div></div>
   </div>
 </nav>
 
@@ -467,6 +481,116 @@
 <!-- Loading Progress Bar -->
 <div class="progress-bar blue"></div>
 
+<style>
+
+
+
+
+/* Fix overall positioning */
+.dropdown22 {
+  position: relative;
+  display: inline-block;
+  margin-right: 0px; /* spacing between Services and About/Contact */
+}
+
+.menu.uppercase > li > a {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/* Align Services Button */
+
+
+/* Dropdown box */
+.dropdown-content22 {
+  display: none;
+  position: absolute;
+  top: 120%; /* LOWER the dropdown to avoid overlapping */
+  left: 0;
+  width: 220px;
+  background-color: #000;
+  border-radius: 6px;
+  padding: 8px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+
+
+/* Prevent inheritance from .menu and .uppercase affecting dropdown items */
+.dropdown-content22 .dropdown-link-btn {
+  text-transform: none !important; /* prevent uppercase */
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  padding: 12px 18px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: normal;
+  
+}
+
+
+/* Hover effect for buttons */
+.dropdown-link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+}
+
+/* Show dropdown when hovered or clicked */
+.dropdown22:hover .dropdown-content22,
+.dropdown22.active .dropdown-content22 {
+  display: block;
+}
+
+.dropdown-content22 .dropdown-link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+}
+
+
+
+
+</style>
+
+
+<script>
+  const dropdown = document.getElementById('servicesDropdown');
+  const button = dropdown.querySelector('.services-button22');
+
+  let isClicked = false;
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation();
+    isClicked = !dropdown.classList.contains('active');
+    dropdown.classList.toggle('active', isClicked);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      dropdown.classList.remove('active');
+      isClicked = false;
+    }
+  });
+
+  dropdown.addEventListener('mouseenter', () => {
+    if (!isClicked) dropdown.classList.add('hover');
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    if (!isClicked) dropdown.classList.remove('hover');
+  });
+</script>
+
+
+
+
 <!-- custom slider -->
 <div id="mobileSliderContainer">
   <!-- mobile-menu.html -->
@@ -533,7 +657,7 @@
 
   <!-- Sliding Menu -->
   <nav id="mobile-menu">
-     <ul>
+    <ul>
   <li><a href="/Services/">Services</a></li>
   <li><a href="/About/">About</a></li>
   <li><a href="/Contact/">Contact</a></li>
